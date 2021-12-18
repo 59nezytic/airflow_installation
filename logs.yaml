@@ -1,0 +1,45 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: airflow-logs-sc
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: airflow-logs-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: airflow-logs-sc
+  local:
+    path: /data/volumes/logs
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - core-worker1
+
+---
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: airflow-logs-pvc
+spec:
+  accessModes:
+  - ReadWriteMany
+  storageClassName: airflow-logs-sc
+  resources:
+    requests:
+      storage: 1Gi
+
