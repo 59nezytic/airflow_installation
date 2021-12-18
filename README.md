@@ -22,9 +22,8 @@ mkdir /data/volumes/postgres
 mkdir /data/volumes/logs
 ```
 
-```
-Change postgre, logs YAML FILE {values : NODE_NAME}
-```
+
+Change postgres, logs YAML FILE {values : NODE_NAME}
 
 ```
 k create ns airflow
