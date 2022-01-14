@@ -25,7 +25,7 @@ mkdir -p /data/volumes/logs
 ```
 
 
-Change postgres, logs YAML FILE {values : NODE_NAME}
+Change postgres, logs YAML FILE {values : NODE_NAME} \n
 Change custom_values_v8.5.2 YAML FILE {repo: "https://{GIT ID}:{ACCESS_TOKEN}@github.com/59nezytic/airflow-dag"}
 
 ```
