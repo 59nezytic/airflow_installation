@@ -17,7 +17,7 @@ helm repo add airflow-stable https://airflow-helm.github.io/charts
 helm repo update
 ```
 
-(On Worker Node)
+(On WORKERNODE)
 
 ```
 mkdir -p /data/volumes/postgres
@@ -25,7 +25,7 @@ mkdir -p /data/volumes/logs
 ```
 
 
-Change postgres, logs YAML FILE {values : NODE_NAME}
+Change postgres, logs YAML FILE {values : WORKERNODE_NAME}
 
 
 Change custom_values_v8.5.2 YAML FILE {repo: "https://{GIT ID}:{ACCESS_TOKEN}@github.com/59nezytic/airflow-dag"}
