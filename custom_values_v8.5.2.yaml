@@ -1549,11 +1549,12 @@ postgresql:
     ##
     enabled: true
 
+
+    existingClaim: "postgres-pvc"
+    
     ## the name of the StorageClass used by the PVC
     ##
     storageClass: "postgres-sc"
-
-    existingClaim: "postgres-pvc"
 
     ## the access modes of the PVC
     ##
