@@ -20,8 +20,8 @@ helm repo update
 (On Worker Node)
 
 ```
-mkdir /data/volumes/postgres
-mkdir /data/volumes/logs
+mkdir -p /data/volumes/postgres
+mkdir -p /data/volumes/logs
 ```
 
 
