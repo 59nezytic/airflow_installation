@@ -1553,6 +1553,8 @@ postgresql:
     ##
     storageClass: "postgres-sc"
 
+    existingClaim: "postgres-pvc"
+
     ## the access modes of the PVC
     ##
     accessModes:

@@ -1,12 +1,11 @@
-kind: StorageClass
 apiVersion: storage.k8s.io/v1
+kind: StorageClass
 metadata:
   name: airflow-logs-sc
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: WaitForFirstConsumer
 
 ---
-
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -30,9 +29,8 @@ spec:
           - core-worker1
 
 ---
-
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
   name: airflow-logs-pvc
 spec:
