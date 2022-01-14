@@ -1102,7 +1102,7 @@ dags:
     ##   # ssh git repo
     ##   repo: "git@github.com:USERNAME/REPOSITORY.git"
     ##
-    repo: "https://59nezytic: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@github.com/59nezytic/airflow-dag"
+    repo: "https://59nezytic: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@github.com/59nezytic/airflow-dag"
 
     ## the sub-path within your repo where dags are located
     ## - only dags under this path within your repo will be seen by airflow,
