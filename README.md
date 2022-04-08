@@ -32,7 +32,7 @@ Change custom_values_v8.5.2 YAML FILE {repo: "https://{GIT ID}:{ACCESS_TOKEN}@gi
 
 ```
 k create ns airflow
-k apply -f logs.yaml -f postgres.yaml -n airflow
+k apply -f logs.yaml -f postgres.yaml
 ```
 
 ```
