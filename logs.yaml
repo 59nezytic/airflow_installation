@@ -2,6 +2,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: airflow-logs-sc
+  namespace: airflow
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: WaitForFirstConsumer
 
@@ -10,6 +11,7 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: airflow-logs-pv
+  namespace: airflow
 spec:
   capacity:
     storage: 1Gi
@@ -33,6 +35,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: airflow-logs-pvc
+  namespace: airflow
 spec:
   accessModes:
   - ReadWriteMany
